@@ -1,3 +1,4 @@
+release_repo_url: git@github.com:luxonis/depthai-core-v3-release.git
 tracks:
   humble:
     actions:
@@ -41,6 +42,8 @@ tracks:
       :{release_inc} --os-name fedora
     - git-bloom-generate -y rosrpm --prefix release/:{ros_distro} :{ros_distro} -i
       :{release_inc} --os-name rhel
+    - git-bloom-generate -y rosdynrpm --prefix release/:{ros_distro} :{ros_distro}
+      -i :{release_inc} --require-os fedora rhel
     devel_branch: v3_jazzy
     last_release: v3.2.2-jazzy.1
     last_version: 3.2.2
