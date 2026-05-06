@@ -16,11 +16,11 @@ tracks:
     - git-bloom-generate -y rosdynrpm --prefix release/:{ros_distro} :{ros_distro}
       -i :{release_inc} --require-os fedora rhel
     devel_branch: v3_humble
-    last_release: ros-v3.6.1-humble.1
+    last_release: ros-v3.6.1-humble.2
     last_version: 3.6.1
     name: upstream
     patches: null
-    release_inc: '1'
+    release_inc: '2'
     release_repo_url: git@github.com:luxonis/depthai-core-v3-release.git
     release_tag: ros-v3.6.1-humble.2
     ros_distro: humble
