@@ -25,7 +25,7 @@
 #include "depthai/utility/Serialization.hpp"
 
 // project
-#include "utility/FmtCompatibility.hpp"
+#include <fmt/std.h>
 
 #include "utility/ArchiveUtil.hpp"
 #include "utility/Environment.hpp"

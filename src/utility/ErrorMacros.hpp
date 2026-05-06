@@ -1,5 +1,5 @@
 #include <fmt/format.h>
-#include "utility/FmtCompatibility.hpp"
+#include <fmt/std.h>
 
 #include <stdexcept>
 

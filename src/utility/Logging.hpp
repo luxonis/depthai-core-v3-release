@@ -2,11 +2,7 @@
 #include <string>
 
 // libraries
-#if __has_include(<spdlog/fmt/std.h>)
-    #include <spdlog/fmt/std.h>
-#elif __has_include(<spdlog/fmt/ostr.h>)
-    #include <spdlog/fmt/ostr.h>
-#endif
+#include <spdlog/fmt/std.h>
 #include <spdlog/sinks/stdout_color_sinks.h>
 #include <spdlog/spdlog.h>
 
