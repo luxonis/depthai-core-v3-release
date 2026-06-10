@@ -20,9 +20,9 @@ tracks:
     last_version: 3.6.1
     name: upstream
     patches: null
-    release_inc: '2'
+    release_inc: '1'
     release_repo_url: git@github.com:luxonis/depthai-core-v3-release.git
-    release_tag: ros-v3.6.1-humble.2
+    release_tag: ros-v3.7.1-humble.3
     ros_distro: humble
     vcs_type: git
     vcs_uri: https://github.com/luxonis/depthai-core.git
@@ -47,9 +47,9 @@ tracks:
     last_version: 3.6.1
     name: upstream
     patches: null
-    release_inc: '2'
+    release_inc: '1'
     release_repo_url: git@github.com:luxonis/depthai-core-v3-release.git
-    release_tag: ros-v3.6.1-jazzy.2
+    release_tag: ros-v3.7.1-jazzy.3
     ros_distro: jazzy
     vcs_type: git
     vcs_uri: https://github.com/luxonis/depthai-core.git
