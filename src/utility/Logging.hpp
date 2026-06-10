@@ -2,6 +2,7 @@
 #include <string>
 
 // libraries
+#include <spdlog/fmt/fmt.h>
 #if __has_include(<spdlog/fmt/std.h>)
     #include <spdlog/fmt/std.h>
 #elif __has_include(<spdlog/fmt/ostr.h>)
@@ -15,6 +16,18 @@
 #include <depthai/log/LogLevel.hpp>
 
 namespace dai {
+
+namespace detail {
+
+#if defined(SPDLOG_VER_MAJOR) && ((SPDLOG_VER_MAJOR > 1) || (SPDLOG_VER_MAJOR == 1 && SPDLOG_VER_MINOR >= 10))
+template <typename... Args>
+using spdlog_format_string_t = spdlog::format_string_t<Args...>;
+#else
+template <typename... Args>
+using spdlog_format_string_t = fmt::format_string<Args...>;
+#endif
+
+}  // namespace detail
 
 LogLevel spdlogLevelToLogLevel(spdlog::level::level_enum level, LogLevel defaultValue = LogLevel::OFF);
 spdlog::level::level_enum logLevelToSpdlogLevel(LogLevel level, spdlog::level::level_enum defaultValue = spdlog::level::off);
@@ -43,43 +56,43 @@ inline spdlog::level::level_enum get_level() {
     return Logging::getInstance().logger.level();
 }
 
-template <typename FormatString, typename... Args>
-inline void log(spdlog::source_loc source, spdlog::level::level_enum lvl, const FormatString& fmt, Args&&... args) {
+template <typename... Args>
+inline void log(spdlog::source_loc source, spdlog::level::level_enum lvl, detail::spdlog_format_string_t<Args...> fmt, Args&&... args) {
     Logging::getInstance().logger.log(source, lvl, fmt, std::forward<Args>(args)...);
 }
 
-template <typename FormatString, typename... Args>
-inline void log(spdlog::level::level_enum lvl, const FormatString& fmt, Args&&... args) {
+template <typename... Args>
+inline void log(spdlog::level::level_enum lvl, detail::spdlog_format_string_t<Args...> fmt, Args&&... args) {
     Logging::getInstance().logger.log(spdlog::source_loc{}, lvl, fmt, std::forward<Args>(args)...);
 }
 
-template <typename FormatString, typename... Args>
-inline void trace(const FormatString& fmt, Args&&... args) {
+template <typename... Args>
+inline void trace(detail::spdlog_format_string_t<Args...> fmt, Args&&... args) {
     Logging::getInstance().logger.trace(fmt, std::forward<Args>(args)...);
 }
 
-template <typename FormatString, typename... Args>
-inline void debug(const FormatString& fmt, Args&&... args) {
+template <typename... Args>
+inline void debug(detail::spdlog_format_string_t<Args...> fmt, Args&&... args) {
     Logging::getInstance().logger.debug(fmt, std::forward<Args>(args)...);
 }
 
-template <typename FormatString, typename... Args>
-inline void info(const FormatString& fmt, Args&&... args) {
+template <typename... Args>
+inline void info(detail::spdlog_format_string_t<Args...> fmt, Args&&... args) {
     Logging::getInstance().logger.info(fmt, std::forward<Args>(args)...);
 }
 
-template <typename FormatString, typename... Args>
-inline void warn(const FormatString& fmt, Args&&... args) {
+template <typename... Args>
+inline void warn(detail::spdlog_format_string_t<Args...> fmt, Args&&... args) {
     Logging::getInstance().logger.warn(fmt, std::forward<Args>(args)...);
 }
 
-template <typename FormatString, typename... Args>
-inline void error(const FormatString& fmt, Args&&... args) {
+template <typename... Args>
+inline void error(detail::spdlog_format_string_t<Args...> fmt, Args&&... args) {
     Logging::getInstance().logger.error(fmt, std::forward<Args>(args)...);
 }
 
-template <typename FormatString, typename... Args>
-inline void critical(const FormatString& fmt, Args&&... args) {
+template <typename... Args>
+inline void critical(detail::spdlog_format_string_t<Args...> fmt, Args&&... args) {
     Logging::getInstance().logger.critical(fmt, std::forward<Args>(args)...);
 }
 
