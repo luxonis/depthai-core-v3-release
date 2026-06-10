@@ -1,7 +1,7 @@
 #include "depthai/pipeline/node/StereoDepth.hpp"
 
 #include <fmt/format.h>  // fmt::format
-#include "utility/FmtCompatibility.hpp"  // std::filesystem::path formatting
+#include <fmt/std.h>     // std::filesystem::path formatting
 
 #include <fstream>
 
