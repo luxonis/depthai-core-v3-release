@@ -1,6 +1,6 @@
 #pragma once
 
-#include "utility/FmtCompatibility.hpp"
+#include <fmt/std.h>
 #include <spdlog/spdlog.h>
 
 #include <fstream>
