@@ -47,7 +47,7 @@ tracks:
     last_version: 3.7.1
     name: upstream
     patches: null
-    release_inc: '1'
+    release_inc: '2'
     release_repo_url: git@github.com:luxonis/depthai-core-v3-release.git
     release_tag: ros-v3.7.1-jazzy.3
     ros_distro: jazzy
