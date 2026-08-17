@@ -15,14 +15,14 @@ tracks:
       :{release_inc} --os-name fedora
     - git-bloom-generate -y rosdynrpm --prefix release/:{ros_distro} :{ros_distro}
       -i :{release_inc} --require-os fedora rhel
-    devel_branch: v3_humble
+    devel_branch: ros-old-devel
     last_release: ros-v3.7.1-humble.3
     last_version: 3.7.1
     name: upstream
     patches: null
-    release_inc: '2'
+    release_inc: '0'
     release_repo_url: git@github.com:luxonis/depthai-core-v3-release.git
-    release_tag: ros-v3.7.1-humble.3
+    release_tag: ros-old-v3.9.0
     ros_distro: humble
     vcs_type: git
     vcs_uri: https://github.com/luxonis/depthai-core.git
@@ -42,14 +42,14 @@ tracks:
       :{release_inc} --os-name fedora
     - git-bloom-generate -y rosdynrpm --prefix release/:{ros_distro} :{ros_distro}
       -i :{release_inc} --require-os fedora rhel
-    devel_branch: v3_jazzy
+    devel_branch: ros-old-devel
     last_release: ros-v3.7.1-jazzy.3
     last_version: 3.7.1
     name: upstream
     patches: null
-    release_inc: '2'
+    release_inc: '0'
     release_repo_url: git@github.com:luxonis/depthai-core-v3-release.git
-    release_tag: ros-v3.7.1-jazzy.3
+    release_tag: ros-old-v3.9.0
     ros_distro: jazzy
     vcs_type: git
     vcs_uri: https://github.com/luxonis/depthai-core.git
