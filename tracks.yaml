@@ -43,11 +43,11 @@ tracks:
     - git-bloom-generate -y rosdynrpm --prefix release/:{ros_distro} :{ros_distro}
       -i :{release_inc} --require-os fedora rhel
     devel_branch: ros-old-devel
-    last_release: ros-v3.7.1-jazzy.3
-    last_version: 3.7.1
+    last_release: ros-old-v3.9.0
+    last_version: 3.9.0
     name: upstream
     patches: null
-    release_inc: '0'
+    release_inc: '1'
     release_repo_url: git@github.com:luxonis/depthai-core-v3-release.git
     release_tag: ros-old-v3.9.0
     ros_distro: jazzy
