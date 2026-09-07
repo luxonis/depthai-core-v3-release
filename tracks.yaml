@@ -22,7 +22,7 @@ tracks:
     patches: null
     release_inc: '1'
     release_repo_url: git@github.com:luxonis/depthai-core-v3-release.git
-    release_tag: ros-old-v3.9.0
+    release_tag: '"ros-old-v:{version}"'
     ros_distro: humble
     vcs_type: git
     vcs_uri: https://github.com/luxonis/depthai-core.git
@@ -49,7 +49,7 @@ tracks:
     patches: null
     release_inc: '1'
     release_repo_url: git@github.com:luxonis/depthai-core-v3-release.git
-    release_tag: ros-old-v3.9.0
+    release_tag: '"ros-old-v:{version}"'
     ros_distro: jazzy
     vcs_type: git
     vcs_uri: https://github.com/luxonis/depthai-core.git
