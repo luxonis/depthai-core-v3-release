@@ -1,3 +1,26 @@
+## depthai_v3 (humble) - 3.11.0-1
+
+The packages in the `depthai_v3` repository were released into the `humble` distro by running `/usr/bin/bloom-release --rosdistro humble depthai_v3` on `Mon, 12 Oct 2026 14:02:41 -0000`
+
+The `depthai_v3` package was released.
+
+Version of package(s) in repository `depthai_v3`:
+
+- upstream repository: https://github.com/luxonis/depthai-core.git
+- release repository: https://github.com/luxonis/depthai-core-v3-release.git
+- rosdistro version: `3.10.0-1`
+- old version: `3.10.0-1`
+- new version: `3.11.0-1`
+
+Versions of tools used:
+
+- bloom version: `0.14.4`
+- catkin_pkg version: `1.1.1`
+- rosdep version: `0.27.0`
+- rosdistro version: `1.1.0`
+- vcstools version: `0.1.42`
+
+
 ## depthai_v3 (jazzy) - 3.10.0-1
 
 The packages in the `depthai_v3` repository were released into the `jazzy` distro by running `/usr/bin/bloom-release --rosdistro jazzy depthai_v3` on `Mon, 07 Sep 2026 11:14:09 -0000`
